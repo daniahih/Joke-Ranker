@@ -3,6 +3,8 @@ import "./JokeRanker.css";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 export default function JokeRanker() {
+  const [likes, setLikes] = useState(0);
+  const [dislikes, setDislikes] = useState(0);
   const [joke, setJoke] = useState([]);
   const fetchJoke = () => {
     fetch("https://api.api-ninjas.com/v1/jokes?limit=1", {
@@ -19,6 +21,14 @@ export default function JokeRanker() {
   useEffect(() => {
     fetchJoke();
   }, []);
+
+  const handleLike = () => {
+    setLikes(likes + 1);
+  };
+
+  const handleDislike = () => {
+    setDislikes(dislikes + 1);
+  };
   return (
     <>
       <h1>Welcome to JokeRanker App</h1>
@@ -30,15 +40,16 @@ export default function JokeRanker() {
             })}
           </div>
           <div className="Button">
-            <button>
+            <button onClick={handleLike}>
               <AiOutlineLike />
             </button>
-            <button>
+            <button onClick={handleDislike}>
               <AiOutlineDislike />
             </button>
           </div>
-
-          <span>Likes: Dislikes:</span>
+          <br />
+          <p>Likes: {likes}</p>
+          <p>Dislikes: {dislikes}</p>
         </div>
       </div>
     </>
