@@ -1,0 +1,40 @@
+.contanier {
+  border: 1px solid black;
+  margin: auto;
+  width: 50vw;
+  margin-top: 10vh;
+  text-align: center;
+  height: 50vh;
+  border-radius: 15px;
+}
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: rgb(72, 134, 155);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+button:hover {
+  background-color: rgb(40, 73, 84);
+}
+
+button:active {
+  background-color: rgb(40, 73, 84);
+}
+h1 {
+  text-align: center;
+}
+.Joke {
+  background-color: rgb(64, 153, 165);
+  width: 40vw;
+  margin: auto;
+  margin-top: 10%;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+.Button {
+  margin-top: 5%;
+}
