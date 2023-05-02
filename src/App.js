@@ -1,7 +1,9 @@
+import JokeRanker from "./components/JokeRanker";
+
 function App() {
   return (
     <div>
-      <h1>Joke-Ranker</h1>
+      <JokeRanker></JokeRanker>
     </div>
   );
 }
