@@ -53,5 +53,6 @@ export default function JokeRanker() {
         </div>
       </div>
     </>
+    // added  changes to try to remove commit
   );
 }
